@@ -1,6 +1,7 @@
 
 <html>
   <head>
+    <link rel='stylesheet' href='https://tribefactory.netlify.app/css/base1.css'/>
     <link href="css/alone.css" rel="stylesheet" type="text/css" />
 
       <title>無題</title>
@@ -14,27 +15,31 @@
 
   </head>
 
-  <body class="mar_a0" id="body" :style="background-image-url">
+  <body class="mar_a0">
+      <div id="body_bg" class="h100p">
+        <div v-bind:style="backgroundimageurl" class="h100p">
 
-      <div class="op_30_bgc_lv04 fnt_c01" id="header">
-        <span class="op_100">head</span>
-      </div>
+                <div class="op_30_bgc_lv04 fnt_c01" id="header">
+                  <span class="op_100">head</span>
+                </div>
 
-      <div></div>
-      
-      <div class="tex_cen mar_t500 pad_t100">
-        <form name="form1" method="post" class="disp_no">
-          <input type="hidden" name="send_photo" value="<%response.write(int_photo)%>" />
-        </form>
-        <input type="button" value="start" class="bor_a_w1 bor_c01 bgc_lv_non fnt_s24 fnt_c01 pad_t5 pad_r10 pad_b5 pad_l10 w200 shd2" onclick="move_question()">
-      </div>
+                <div></div>
+                
+                <div class="tex_cen mar_t300 pad_t100">
+                  <form name="form1" method="post" class="disp_no">
+                    <input type="hidden" name="send_photo" value="<%response.write(int_photo)%>" />
+                  </form>
+                  <input type="button" value="start" class="bor_a_w1 bor_c01 bgc_lv_non fnt_s24 fnt_c01 pad_t5 pad_r10 pad_b5 pad_l10 w200 shd2" onclick="move_question()">
+                </div>
 
-
-      <footer>
-        <script src="https://cdn.jsdelivr.net/npm/vue@2"></script>
-        <script src="js/vue_control.js"></script>
-      </footer>
-
-
+         </div>
+       </div>
   </body>
-</html>
+
+  <footer>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2"></script>
+    <script src="js/vue_control.js"></script>
+  </footer>
+
+
+  </html>
