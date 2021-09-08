@@ -1,10 +1,13 @@
-﻿#header{margin-bottom:50px;
-padding:2px 50px 2px 30px;
+﻿#header{
+    margin-bottom:50px;
+    padding:2px 50px 2px 30px;
 }
 
 
-body {
+.bg_img {
     
+ 
+ 
     /* 画像を常に天地左右の中央に配置 */
     background-position: center center;
     
@@ -16,7 +19,23 @@ body {
     
     /* 表示するコンテナの大きさに基づいて、背景画像を調整 */
     background-size: cover;
+ 
     
+
     /* 背景画像が読み込まれる前に表示される背景のカラー */
     background-color: #464646;
 }
+
+
+
+
+
+.fade-enter-active, .fade-leave-active {
+    transition: opacity .5s;
+  }
+
+  .fade-enter, .fade-leave-to /* .fade-leave-active below version 2.1.8 */ {
+    opacity: 0;
+  }
+
+  

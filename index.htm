@@ -16,22 +16,79 @@
   </head>
 
   <body class="mar_a0">
+
+
+
       <div id="body_bg" class="h100p">
-        <div v-bind:style="backgroundimageurl" class="h100p">
+        <div v-bind:style="backgroundimageurl" class="bg_img h100p">
+          <div style="background-image:url(img/fff.png)" class="h100p">
 
-                <div class="op_30_bgc_lv04 fnt_c01" id="header">
-                  <span class="op_100">head</span>
-                </div>
+                          <div class="op_30_bgc_lv04 fnt_c01" id="header">
+                            <span class="op_100">head</span>
+                          </div>
 
-                <div></div>
-                
-                <div class="tex_cen mar_t300 pad_t100">
-                  <form name="form1" method="post" class="disp_no">
-                    <input type="hidden" name="send_photo" value="<%response.write(int_photo)%>" />
-                  </form>
-                  <input type="button" value="start" class="bor_a_w1 bor_c01 bgc_lv_non fnt_s24 fnt_c01 pad_t5 pad_r10 pad_b5 pad_l10 w200 shd2" onclick="move_question()">
-                </div>
 
+
+
+
+
+
+
+
+                          <div></div>
+                          <div id="example-1" v-pre>
+                            <button v-on:click="counter += 1">Add 1</button>
+                            <p>The button above has been clicked {{ counter }} times.</p>
+                          </div>
+                                                
+
+                      
+<div id="wrapper" v-pre>
+      <ul>
+          <li>
+              <input v-model="foods" type="radio" value="fruits" name="foods" id="fruits">
+              <label for="fruits">果物</label>
+          </li>
+          <li>
+              <input v-model="foods" type="radio" value="vegetables" name="foods" id="vegetables">
+              <label for="vegetables">野菜</label>
+          </li>
+          <li>
+              <input v-model="foods" type="radio" value="meats" name="foods" id="meats">
+              <label for="meats">肉</label>
+          </li>
+      </ul>
+      <div>
+          <select v-model="foodSelect" id="foodSelect">
+              <option value="">未選択</option>
+              <option :value="food" v-for="food in foodList">{{food}}</option>
+          </select>
+      </div>
+</div>
+
+
+
+
+                          <div class="tex_cen mar_t300 pad_t100" id="demo" v-pre>
+
+                                <div v-if="!show">
+                                  <div v-pre>
+                                      <div id="dream" >  
+                                        {{site_name}}
+                                      </div>
+                                  </div>
+                                </div>
+
+
+                                <div v-if="show">
+                                    <form name="form1" method="post" class="disp_no">
+                                      <input type="hidden" name="send_photo" value="<%response.write(int_photo)%>" />
+                                    </form>
+                                    <input type="button" value="start" class="bor_a_w1 bor_c01 bgc_lv_non fnt_s24 fnt_c03 rad_8 shd2_3 pad_t5 pad_r10 pad_b5 pad_l10 w200 shd2" v-on:click="show = !show">
+                                </div>
+
+                          </div>
+          </div>
          </div>
        </div>
   </body>
